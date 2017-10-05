@@ -1,0 +1,21 @@
+<div class="container">
+  <br><br>
+  <div class="row">
+    <form (ngSubmit)="updateData(editForm)" #editForm="ngForm">
+       <div class="form-group">
+          <label for="">First Name:</label>
+          <input type="text" class="form-control" id="fname" [(ngModel)]="fname" name="fname"> 
+       </div>
+       <div class="form-group">
+          <label for="">Last Name:</label>
+          <input type="text" class="form-control" id="lname" [(ngModel)]=lname name="lname">
+       </div> 
+       <button class="btn btn-info">
+            Update Information
+       </button>
+    </form>  
+  </div>
+  <DIV class="row">
+    <app-listing (modifyClicked)="editData($event)"></app-listing>
+  </DIV>
+</div>
